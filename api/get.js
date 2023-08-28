@@ -9,11 +9,12 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version')
     
     // Enable cache
-    res.setHeader('Cache-Control', 's-maxage=43200') // 12 hours
+    // res.setHeader('Cache-Control', 's-maxage=43200') // 12 hours
 
     fetch('http://www.pollofpolls.no/api/gallup.php', { method: "post" })
     .then(response => response.text())
     .then(data => {
+        console.log(data.substring(0,100))
         data = data.replace(/(?:\r\n|\r|\n)/g, ',').slice(0,-1)
         let output = `[${data}]`
         res.send(output)
