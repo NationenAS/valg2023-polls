@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     .then(response => response.text())
     .then(data => {
         data = data.replace(/(?:\r\n|\r|\n)/g, ',').slice(0,-1)
-        output = `[${data}]`
+        let output = `[${data}]`
         res.send(output)
     })
 
