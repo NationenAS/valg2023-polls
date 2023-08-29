@@ -30,36 +30,36 @@ export default async function handler(req, res) {
             if (!pollReference.has(p.kommuneid)) {
                 pollReference.add(p.kommuneid)
                 return {
-                    id: p.gallupid,
-                    kommuneid: p.kommuneid,
+                    id: Number(p.gallupid),
+                    kommuneid: Number(p.kommuneid),
                     dato: p.dato,
                     url: p.url,
                     kilde: p.kilde_lang,
                     institutt: p.institutt_lang,
-                    spurte: p.spurte,
+                    spurte: Number(p.spurte),
                     periodeStart: p.periode_start,
                     periodeSlutt: p.periode_slutt,
                     partier: {
-                        Ap: p.Ap,
-                        SV: p.SV,
-                        Sp: p.Sp,
-                        R: p.R,
-                        MDG: p.MDG,
-                        V: p.V,
-                        KrF: p.KrF,
-                        H: p.H,
-                        Frp: p.Frp,
-                        A: p.A,
+                        Ap: Number(p.Ap),
+                        SV: Number(p.SV),
+                        Sp: Number(p.Sp),
+                        R: Number(p.R),
+                        MDG: Number(p.MDG),
+                        V: Number(p.V),
+                        KrF: Number(p.KrF),
+                        H: Number(p.H),
+                        Frp: Number(p.Frp),
+                        A: Number(p.A),
                     },
                     andre: {
-                        LIB: p.LIB,
-                        IND: p.IND,
-                        HP: p.HP,
-                        DEM: p.DEM,
-                        FNB: p.FNB,
-                        KYST: p.KYST,
-                        PP: p.PP,
-                        DK: p.DK
+                        LIB: Number(p.LIB),
+                        IND: Number(p.IND),
+                        HP: Number(p.HP),
+                        DEM: Number(p.DEM),
+                        FNB: Number(p.FNB),
+                        KYST: Number(p.KYST),
+                        PP: Number(p.PP),
+                        DK: Number(p.DK)
                     }
                 }
             }
