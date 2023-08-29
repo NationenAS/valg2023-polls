@@ -1,7 +1,7 @@
 {
     "crons": [
         {
-            "path": "/api/new",
+            "path": "/api/set",
             "schedule": "0 * * * *"
         }
     ]
