@@ -16,6 +16,7 @@ export default async function handler(req, res) {
         console.log(response.message)
         console.log(response.errors)
         console.log(response.status)
+        return response.text()
     })
     .then(data => {
         res.send(data.substring(0,100))
