@@ -1,0 +1,14 @@
+{
+  "name": "valg2023-polls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/get",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/kv": "^0.2.2"
+  }
+}
