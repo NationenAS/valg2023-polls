@@ -21,7 +21,7 @@ export default async function handler(req, res) {
         d = d.replace(/(?:\r\n|\r|\n)/g, ',').slice(0,-1)
         const json = JSON.parse(`[${d}]`)
         // Filter
-        const newPolls = json.filter(p => p.dato.startsWith("2023-07") || p.dato.startsWith("2023-08"))
+        const newPolls = json.filter(p => p.dato.startsWith("2023-07") || p.dato.startsWith("2023-08")  || p.dato.startsWith("2023-09"))
         const localPolls = newPolls.filter(p => p.type == "kommune" && p.kommuneid != "0")
         // Modify
         let pollReference = new Set()
